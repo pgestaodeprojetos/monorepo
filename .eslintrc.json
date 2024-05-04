@@ -1,10 +1,30 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nx"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended",
+    "next/core-web-vitals"
+  ],
+  "plugins": [
+    "@nx",
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "tailwindcss"
+  ],
+  "rules": {
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/classnames-order": "off"
+  },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "plugins": ["@typescript-eslint"],
       "rules": {
         "@nx/enforce-module-boundaries": [
           "error",

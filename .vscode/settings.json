@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "git.mergeEditor": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "prettier.enable": true
+}

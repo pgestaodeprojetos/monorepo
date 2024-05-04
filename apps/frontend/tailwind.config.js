@@ -1,9 +1,17 @@
 const { fontFamily } = require('tailwindcss/defaultTheme');
+const { join } = require('path');
+const { createGlobPatternsForDependencies } = require('@nrwl/react/tailwind');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
-  content: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}'],
+  content: [
+    join(
+      __dirname,
+      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}',
+    ),
+    ...createGlobPatternsForDependencies(__dirname),
+  ],
   theme: {
     container: {
       center: true,

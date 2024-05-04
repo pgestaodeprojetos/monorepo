@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import './global.css';
 import { ThemeProvider } from '@providers/ThemeProvider/ThemeProvider';
 
 function CustomApp({ Component, pageProps }: AppProps) {
@@ -9,7 +9,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Welcome to frontend!</title>
       </Head>
-      <main className="app">
+      <main className="bg-background min-h-screen font-sans antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

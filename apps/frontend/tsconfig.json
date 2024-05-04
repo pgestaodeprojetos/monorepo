@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,
@@ -13,7 +13,9 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@*": ["./src/*"]
+      "@*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@i18n/*": ["./src/i18n/*"]
     },
     "plugins": [
       {
