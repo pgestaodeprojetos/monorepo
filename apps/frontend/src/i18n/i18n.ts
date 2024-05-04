@@ -9,7 +9,6 @@ export const defaultLanguage = 'pt-BR';
 i18next.use(initReactI18next).init({
   fallbackLng: 'pt-BR',
   lng: defaultLanguage,
-  debug: true,
   resources: {
     en,
     pt,
