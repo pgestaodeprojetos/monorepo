@@ -4,13 +4,13 @@
 import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { Button } from '../../../../../shadcn/src/index';
+import { Button } from '@shadcn/components';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '../../../../../shadcn/src/index';
+} from '@shadcn/components';
 import { translation } from '@i18n/i18n';
 
 export function ModeToggle() {
